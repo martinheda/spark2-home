@@ -6,6 +6,7 @@
 .claude.json
 .secrets.baseline
 bw.zip
+certs-spark2/
 
 # Cache & state
 .cache/
@@ -27,7 +28,6 @@ snap/
 # Runtime dirs
 .ollama/
 .openclaw/
-.openclaw/
 .cursor-server/
 .nvm/
 .npm/
@@ -37,6 +37,18 @@ snap/
 .ipython/
 .jupyter/
 jupyterlab/
+
+# .claude — exclude everything except settings
+.claude/backups/
+.claude/cache/
+.claude/downloads/
+.claude/file-history/
+.claude/history.jsonl
+.claude/mcp-needs-auth-cache.json
+.claude/plugins/
+.claude/projects/
+.claude/session-env/
+.claude/shell-snapshots/
 
 # Project dirs (have their own repos)
 openclaw/

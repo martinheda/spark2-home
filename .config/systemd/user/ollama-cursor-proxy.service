@@ -1,0 +1,12 @@
+[Unit]
+Description=Ollama proxy for Cursor (injects model parameter)
+After=network.target ollama.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/martin/ollama-cursor-proxy.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

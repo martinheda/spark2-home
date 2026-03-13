@@ -1,0 +1,12 @@
+[Unit]
+Description=JupyterLab
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/martin/jupyterlab/.venv/bin/jupyter lab
+WorkingDirectory=/home/martin
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

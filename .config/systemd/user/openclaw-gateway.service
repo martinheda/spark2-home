@@ -1,0 +1,22 @@
+[Unit]
+Description=OpenClaw Gateway (v2026.2.21-2)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/home/martin/.nvm/versions/node/v24.13.1/bin/node /home/martin/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+Restart=always
+RestartSec=5
+KillMode=process
+Environment=HOME=/home/martin
+Environment=TMPDIR=/tmp
+Environment=PATH=/home/martin/.nvm/current/bin:/home/martin/.local/bin:/home/martin/.npm-global/bin:/home/martin/bin:/home/martin/.volta/bin:/home/martin/.asdf/shims:/home/martin/.bun/bin:/home/martin/.fnm/current/bin:/home/martin/.local/share/pnpm:/usr/local/bin:/usr/bin:/bin
+Environment=OPENCLAW_GATEWAY_PORT=18789
+Environment=OPENCLAW_GATEWAY_TOKEN=hoyo18
+Environment=OPENCLAW_SYSTEMD_UNIT=openclaw-gateway.service
+Environment=OPENCLAW_SERVICE_MARKER=openclaw
+Environment=OPENCLAW_SERVICE_KIND=gateway
+Environment=OPENCLAW_SERVICE_VERSION=2026.2.21-2
+
+[Install]
+WantedBy=default.target

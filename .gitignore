@@ -36,7 +36,6 @@ snap/
 .rustup/
 .emacs.d/
 .ipython/
-.jupyter/
 jupyterlab/
 
 # .claude — exclude everything except settings
@@ -72,6 +71,9 @@ Videos/
 # IDE
 .cursor/
 .vscode/
-.config/
 .nvwb/
 nvidia-workbench/
+
+# Config (selective)
+.config/systemd/user/*.service~
+.vscode-server/

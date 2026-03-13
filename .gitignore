@@ -1,5 +1,6 @@
 # Sensitive
 .ssh/
+.docker/
 .gnupg/
 .npmrc
 .netrc
